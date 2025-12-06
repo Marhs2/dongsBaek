@@ -1,12 +1,8 @@
 import sys
 
-input = sys.stdin.readline
+input_data = sys.stdin.read().split()
 
-size = int(input().strip())
+if input_data:
+    arr = sorted(map(int, input_data[1:]))
 
-arr = [int(input().strip()) for i in range(size)]
-
-arr.sort()
-
-for i in arr:
-    sys.stdout.write(str(i) + '\n')
+    sys.stdout.write('\n'.join(map(str, arr)) + '\n')
